@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Book",
+    "price": 10.99,
+    "imgUrl": "/imgs/book.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Computer",
+    "price": 1199,
+    "imgUrl": "/imgs/computer.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Banana",
+    "price": 1.05,
+    "imgUrl": "/imgs/banana.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Movies",
+    "price": 1000,
+    "imgUrl": "https://pixabay.com/photos/automobile-car-junkyard-scrap-metal-3368094.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Songs",
+    "price": 100,
+    "imgUrl": "https://pixabay.com/photos/automobile-car-junkyard-scrap-metal-3368094.jpg"
+  },
+  {
+    "id": 6,
+    "name": "House",
+    "price": 1400000,
+    "imgUrl": "https://pixabay.com/photos/automobile-car-junkyard-scrap-metal-3368094.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Food",
+    "price": 500,
+    "imgUrl": "https://pixabay.com/photos/automobile-car-junkyard-scrap-metal-3368094.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Bike",
+    "price": 20000,
+    "imgUrl": "https://pixabay.com/photos/automobile-car-junkyard-scrap-metal-3368094.jpg"
+  }
+]
