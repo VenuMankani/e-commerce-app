@@ -28,14 +28,14 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                 </IconButton>
             </div>
             <div>
-                <Typography variant="h6" align="center" gutterBottom>
+                <Typography variant="h6" align="center" gutterBottom fontFamily={'Courier'} fontSize={25} fontWeight={700}>
                     Cart
                 </Typography>
                 <Stack spacing={3}>
                     {cartItems.map(item => (
                         <CartItem key={item.id} {...item} />
                     ))}
-                    <Typography variant="h6" align="right" fontWeight="bold" paddingRight={5}>
+                    <Typography variant="h6" align="right" fontWeight="bold" paddingRight={5} fontFamily={'Courier'}>
                         Total {formatCurrency(totalAmount)}
                     </Typography>
                 </Stack>

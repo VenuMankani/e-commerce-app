@@ -23,17 +23,17 @@ export function CartItem({ id, quantity }: CartItemProps) {
                 sx={{ width: 75, height: 75, objectFit: "cover" }}
             />
             <div>
-                <Typography variant="body1">
+                <Typography variant="body1" fontFamily={'Courier'} fontWeight={700}>
                     {item.name}{" "}
                     {quantity > 1 && (
                         <span style={{ fontSize: ".65rem" }}>x{quantity}</span>
                     )}
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <Typography variant="body2" color="textSecondary" fontFamily={'Courier'} fontWeight={700}>
                     {formatCurrency(item.price)}
                 </Typography>
             </div>
-            <div>{formatCurrency(item.price * quantity)}</div>
+            <div><Typography fontFamily={'Courier'} fontWeight={700} >{formatCurrency(item.price * quantity)}</Typography></div>
             <IconButton
                 color="error"
                 onClick={() => removeFromCart(item.id)}

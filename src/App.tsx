@@ -15,9 +15,9 @@ function App() {
         <Navbar />
         <Container sx={{ marginTop: 4, marginBottom: 4 }}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/store" element={<Store />} />
-            <Route path="/about" element={<About />} />
+            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Store />} />
+            {/* <Route path="/about" element={<About />} /> */}
           </Routes>
         </Container>
       </BrowserRouter>

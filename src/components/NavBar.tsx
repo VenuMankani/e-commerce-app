@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, AppBar, Toolbar, Typography, Button, Badge } from "@mui/material";
+import { Container, AppBar, Toolbar, Typography, Button, Badge, IconButton } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
@@ -8,47 +8,47 @@ export function Navbar() {
     const { openCart, cartQuantity } = useShoppingCart();
 
     return (
-        <AppBar position="sticky" color="default" elevation={1}>
+        <AppBar
+            position="sticky"
+            color="default"
+            sx={{
+                backgroundColor: 'white',
+            }}>
             <Container>
-                <Toolbar>
-                    <Typography variant="h6" component={NavLink} to="/" color="inherit" sx={{ textDecoration: 'none' }}>
-                        Home
+                <Toolbar
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}>
+                    <Typography variant="h3" fontWeight={100} fontFamily={'Courier'}>
+                        SHOPPING CART
                     </Typography>
-                    <Typography variant="h6" component={NavLink} to="/store" color="inherit" sx={{ textDecoration: 'none', marginLeft: 2 }}>
-                        Store
-                    </Typography>
-                    <Typography variant="h6" component={NavLink} to="/about" color="inherit" sx={{ textDecoration: 'none', marginLeft: 2 }}>
-                        About
-                    </Typography>
-                    {cartQuantity > 0 && (
-                        <Button
-                            onClick={openCart}
-                            variant="contained"
-                            color="error"
-                            sx={{
-                                width: '0.5rem',
-                                height: '3rem',
-                                borderRadius: '50%',
-                                position: 'absolute',
-                                display: 'flex',
-                                alignItems: 'center',
-                                marginLeft: '63rem'
-                            }}
-                        >
-                            <ShoppingCartIcon sx={{ fill: 'gold' }} />
-                            <Badge
-                                badgeContent={cartQuantity} color="error"
-                                sx={{
-                                    position: 'absolute',
-                                    bottom: 0,
-                                    right: 0,
-                                    transform: 'translate(25%, 25%)'
-                                }}
-                            />
-                        </Button>
-                    )}
                 </Toolbar>
-            </Container>
-        </AppBar>
+                {cartQuantity > 0 && (
+                    <IconButton onClick={openCart}
+                        sx={{
+                            position: 'absolute',
+                            display: 'flex',
+                            alignItems: 'center',
+                            top: 15,
+                            right: 50
+                        }}
+                    >
+                        <ShoppingCartIcon sx={{ fill: 'black' }}
+                        />
+                        <Badge
+                            badgeContent={cartQuantity} color="error"
+                            sx={{
+                                position: 'absolute',
+                                top: 0,
+                                right: 0,
+                                transform: 'translate(25%, 25%)'
+                            }}
+                        />
+                    </IconButton>
+                )}
+            </Container >
+        </AppBar >
     );
 }
